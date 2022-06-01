@@ -1,0 +1,35 @@
+@import "../../assets/scss/variables.scss";
+
+header .nav-menu {
+  float: left;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+
+  .nav-link {
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    height: 100%;
+    cursor: pointer;
+    color: $c-text;
+    border-bottom: 2px solid transparent;
+    @include transition;
+
+    padding: 0.25rem 1rem 1rem;
+    @include sm {
+      padding-bottom: 2.1rem;
+    }
+
+    &:hover {
+      color: $c-primary;
+    }
+
+    &.nav-link__active {
+      color: $c-primary;
+      font-weight: 600;
+      border-color: $c-primary;
+    }
+  }
+}

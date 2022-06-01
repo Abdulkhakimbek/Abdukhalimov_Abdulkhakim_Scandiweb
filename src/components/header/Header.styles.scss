@@ -1,0 +1,55 @@
+@import "../../assets/scss/variables.scss";
+
+header {
+  position: relative;
+  padding-top: $navbar-padding-top;
+  height: auto;
+  background-color: $c-white;
+  width: 100%;
+  z-index: 10;
+
+  .header__navbar {
+    height: 100%;
+    @include app-width;
+    display: grid;
+    align-items: center;
+    position: relative;
+    grid-template-columns: auto 0% auto;
+
+    @include sm {
+      grid-template-columns: 45% 10% 45%;
+    }
+
+    .header__logo {
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .header__logo__svg {
+        display: none;
+        @include sm {
+          display: block;
+        }
+      }
+    }
+
+    .header__right-side {
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+}
+
+.header__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 5;
+  background-color: rgba($color: #393748, $alpha: 0.22);
+}

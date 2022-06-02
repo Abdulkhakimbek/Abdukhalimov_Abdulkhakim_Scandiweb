@@ -3,14 +3,14 @@ import { connect } from "react-redux";
 import { compose } from "@reduxjs/toolkit";
 import { createStructuredSelector } from "reselect";
 
-import { selectProductPrice } from "../../redux/currency.reducer";
-import { withNavigation } from "../../HOC.js";
+import { withNavigation } from "../../HOC";
+import ProductModal from "../productModal";
+import { selectProductPrice } from "../../redux/currencyReducer";
+import { addItemToCart } from "../../redux/cartReducer";
 
 import { ReactComponent as CartSVG } from "../../assets/images/circle-cart.svg";
 
-import "./CategoryItem.styles.scss";
-import ProductModal from "../productModal/ProductModal.comp";
-import { addItemToCart } from "../../redux/cart.reducer";
+import "./CategoryItem.scss";
 
 class CategoryItem extends React.Component {
   state = {

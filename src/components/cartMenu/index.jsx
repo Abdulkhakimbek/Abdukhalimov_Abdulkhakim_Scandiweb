@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
-import { dismissCartMenu } from "../../redux/ui.reducer";
-import { selectCartItemsTotalCount } from "../../redux/cart.reducer";
+import { dismissCartMenu } from "../../redux/uiReducer";
+import { selectCartItemsTotalCount } from "../../redux/cartReducer";
 
-import "./CartMenu.styles.scss";
-import CartItemsContainer from "../cartItem/CartItems.container";
+import CartItemsContainer from "../cartItem/CartItemsContainer";
+import "./CartMenu.scss";
 
 class CartMenu extends React.Component {
   dismissMenuHandler = () => {

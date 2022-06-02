@@ -8,7 +8,7 @@ class NavLink extends React.Component {
     const { children, location, to, ...props } = this.props;
     const isActive =
       location.pathname === "/" + to ||
-      (location.pathname === "/" && to === "all")
+        (location.pathname === "/" && to === "all")
         ? "nav-link nav-link__active"
         : "nav-link";
 

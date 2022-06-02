@@ -2,13 +2,13 @@ import React from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
-import { selectCartItemsTotalCount } from "../../redux/cart.reducer";
-import { selectIsCartMenuOpen, toggleCartMenu } from "../../redux/ui.reducer";
+import { selectCartItemsTotalCount } from "../../redux/cartReducer";
+import { selectIsCartMenuOpen, toggleCartMenu } from "../../redux/uiReducer";
 
 import { ReactComponent as CartSVG } from "../../assets/images/empty-cart.svg";
 
-import CartMenu from "../cartMenu/CartMenu.comp";
-import "./CartIcon.styles.scss";
+import CartMenu from "../cartMenu";
+import "./CartIcon.scss";
 
 class CartIcon extends React.Component {
   render() {

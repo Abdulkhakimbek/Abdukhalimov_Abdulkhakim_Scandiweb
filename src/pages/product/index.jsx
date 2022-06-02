@@ -6,13 +6,13 @@ import sanitizeHtml from "sanitize-html";
 import parseHtml from "html-react-parser";
 
 import { withNavigation, withParams } from "../../HOC";
-import { fetchProductInfo } from "../../api";
-import { selectProductPrice } from "../../redux/currency.reducer";
-import { addItemToCart } from "../../redux/cart.reducer";
+import { fetchProductInfo } from "../../query/query";
+import { selectProductPrice } from "../../redux/currencyReducer";
+import { addItemToCart } from "../../redux/cartReducer";
 
-import SpinnerComp from "../../base/spinner/Spinner.comp";
-import ProductAttribute from "../../components/productAttribute/ProductAttribute.comp";
-import "./Product.styles.scss";
+import SpinnerComp from "../../utils/spinner/Spinner.comp";
+import ProductAttribute from "../../components/productAttribute";
+import "./Product.scss";
 
 class ProductPage extends React.Component {
   state = {

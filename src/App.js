@@ -2,17 +2,17 @@ import React, { Suspense } from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
-import SpinnerComp from "./base/spinner/Spinner.comp";
+import SpinnerComp from "./utils/spinner/Spinner.comp";
 import {
   fetchInitialDataAsync,
   selectCategoryNames,
   selectHasNetworkError,
   selectIsLoading,
-} from "./redux/shop.reducer";
+} from "./redux/shopReducer";
 
-import HeaderComp from "./components/header/Header.comp";
+import HeaderComp from "./components/header";
 import AppRoutes from "./routes";
-import ServerErrorPage from "./pages/serverError/ServerError.page";
+import ServerErrorPage from "./pages/serverError";
 
 class App extends React.Component {
   componentDidMount() {

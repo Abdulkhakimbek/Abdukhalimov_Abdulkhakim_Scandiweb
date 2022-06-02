@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
-import { selectCategoryNames } from "../../redux/shop.reducer";
+import { selectCategoryNames } from "../../redux/shopReducer";
 
-import "./NavMenu.styles.scss";
+import "./NavMenu.scss";
 
-import CustomLink from "../../base/customLink/CustomLink.comp";
+import CustomLink from "../../utils/customLink/CustomLink.comp";
 
 class NavMenu extends React.Component {
   render() {
@@ -14,10 +14,10 @@ class NavMenu extends React.Component {
       <nav className="nav-menu">
         {routes
           ? routes.map(({ name }) => (
-              <CustomLink to={name} key={name}>
-                {name}
-              </CustomLink>
-            ))
+            <CustomLink to={name} key={name}>
+              {name}
+            </CustomLink>
+          ))
           : null}
       </nav>
     );

@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "./Checkout.styles.scss";
-import CartItemsContainer from "../../components/cartItem/CartItems.container";
+import "./Checkout.scss";
+import CartItemsContainer from "../../components/cartItem/CartItemsContainer";
 
 class CheckoutPage extends React.Component {
   render() {

@@ -2,15 +2,14 @@ import React from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
-import { selectIsCartMenuOpen } from "../../redux/ui.reducer";
-
+import { selectIsCartMenuOpen } from "../../redux/uiReducer";
 import { ReactComponent as LogoSVG } from "../../assets/images/logo.svg";
 
-import "./Header.styles.scss";
+import CurrencyIcon from "../currencyIcon";
+import CartIcon from "../cartIcon";
+import NavMenu from "../navMenu";
 
-import CurrencyIcon from "../currencyIcon/CurrencyIcon.comp";
-import CartIcon from "../cartIcon/CartIcon.comp";
-import NavMenu from "../navMenu/NavMenu.comp";
+import "./Header.scss";
 
 class HeaderComp extends React.Component {
   render() {

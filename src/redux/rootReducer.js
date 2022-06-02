@@ -1,9 +1,9 @@
 import { combineReducers } from "@reduxjs/toolkit";
 
-import cartReducer from "./cart.reducer";
-import currencyReducer from "./currency.reducer";
-import shopReducer from "./shop.reducer";
-import uiReducer from "./ui.reducer";
+import cartReducer from "./cartReducer";
+import currencyReducer from "./currencyReducer";
+import shopReducer from "./shopReducer";
+import uiReducer from "./uiReducer";
 
 const rootReducer = combineReducers({
   cart: cartReducer,

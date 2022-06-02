@@ -1,12 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { addItemToCart, modifyItemInCart } from "../../redux/cart.reducer";
+import { addItemToCart, modifyItemInCart } from "../../redux/cartReducer";
 
-import CustomModal from "../../base/customModal/CustomModal.comp";
-import ProductAttribute from "../productAttribute/ProductAttribute.comp";
+import CustomModal from "../../utils/customModal/CustomModal.comp";
+import ProductAttribute from "../productAttribute";
 
-import "./ProductModal.styles.scss";
+import "./ProductModal.scss";
 
 class ProductModal extends React.Component {
   handleSubmit = (e) => {

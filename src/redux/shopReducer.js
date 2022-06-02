@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { createSelector } from "reselect";
 
-import { fetchCategoryProducts, fetchInitialData } from "../api";
-import { setCurrencyOptions } from "./currency.reducer";
+import { fetchCategoryProducts, fetchInitialData } from "../query/query";
+import { setCurrencyOptions } from "./currencyReducer";
 
 // =====================
 // === INITIAL STATE ===

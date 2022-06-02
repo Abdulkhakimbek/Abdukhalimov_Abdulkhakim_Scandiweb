@@ -1,13 +1,13 @@
 import React, { lazy } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 
-const CategoryPage = lazy(() => import("./pages/category/Category.page"));
-const ProductPage = lazy(() => import("./pages/product/Product.page"));
-const CheckoutPage = lazy(() => import("./pages/checkout/Checkout.page"));
+const CategoryPage = lazy(() => import("./pages/category"));
+const ProductPage = lazy(() => import("./pages/product"));
+const CheckoutPage = lazy(() => import("./pages/checkout"));
 const ServerErrorPage = lazy(() =>
-  import("./pages/serverError/ServerError.page")
+  import("./pages/serverError")
 );
-const NotFoundPage = lazy(() => import("./pages/notFound/NotFound.page"));
+const NotFoundPage = lazy(() => import("./pages/notFound"));
 
 class AppRoutes extends React.Component {
   render() {

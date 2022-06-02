@@ -2,17 +2,17 @@ import React from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
-import { selectCurrentCurrencySymbol } from "../../redux/currency.reducer";
+import { selectCurrentCurrencySymbol } from "../../redux/currencyReducer";
 import {
   selectIsCurrencyMenuOpen,
   toggleCurrencyMenu,
-} from "../../redux/ui.reducer";
+} from "../../redux/uiReducer";
 
 import { ReactComponent as ArrowSVG } from "../../assets/images/down-arrow.svg";
 
-import "./CurrencyIcon.styles.scss";
+import "./CurrencyIcon.scss";
 
-import CurrencyMenu from "../currencyMenu/CurrencyMenu.comp";
+import CurrencyMenu from "../currencyMenu";
 
 class CurrencyIcon extends React.Component {
   render() {

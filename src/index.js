@@ -4,10 +4,10 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { ApolloProvider } from "@apollo/client";
 
-import "./assets/scss/index.scss";
 import store from "./redux/store";
-import apiClient from "./api";
+import apiClient from "./query/query";
 import App from "./App";
+import "./assets/scss/index.scss";
 
 ReactDOM.render(
   <React.StrictMode>

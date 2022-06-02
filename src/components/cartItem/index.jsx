@@ -7,8 +7,8 @@ import {
   addItemToCart,
   clearItemFromCart,
   removeItemFromCart,
-} from "../../redux/cart.reducer";
-import { selectProductPrice } from "../../redux/currency.reducer";
+} from "../../redux/cartReducer";
+import { selectProductPrice } from "../../redux/currencyReducer";
 
 import { ReactComponent as AddSVG } from "../../assets/images/add-sign.svg";
 import { ReactComponent as SubSVG } from "../../assets/images/sub-sign.svg";
@@ -17,8 +17,8 @@ import { ReactComponent as RightArrowSVG } from "../../assets/images/arrow-right
 import { ReactComponent as DeleteSVG } from "../../assets/images/delete-sign.svg";
 import { ReactComponent as EditSVG } from "../../assets/images/edit-sign.svg";
 
-import "./CartItem.styles.scss";
-import ProductModal from "../productModal/ProductModal.comp";
+import ProductModal from "../productModal";
+import "./CartItem.scss";
 
 class CartItem extends React.Component {
   state = {

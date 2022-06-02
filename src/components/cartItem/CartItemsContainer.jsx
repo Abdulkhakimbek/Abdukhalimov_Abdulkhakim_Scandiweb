@@ -2,14 +2,14 @@ import React from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
-import { selectCurrentCurrency } from "../../redux/currency.reducer";
+import { selectCurrentCurrency } from "../../redux/currencyReducer";
 import {
   selectCartItems,
   selectCartItemsTotalCount,
   selectCartItemsTotalPrice,
-} from "../../redux/cart.reducer";
+} from "../../redux/cartReducer";
 
-import CartItem from "./CartItem.comp";
+import CartItem from ".";
 
 class CartItemsContainer extends React.Component {
   render() {

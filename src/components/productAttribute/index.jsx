@@ -1,6 +1,6 @@
 import React from "react";
 
-import RadioButton from "../../base/radioButton/RadioButton.base";
+import RadioButton from "../../utils/radioButton/RadioButton.base";
 
 class ProductAttribute extends React.Component {
   isDefaultChecked = (value, idx) => {

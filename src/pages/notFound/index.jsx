@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import Img404 from "../../assets/images/404.webp";
-import "./NotFound.styles.scss";
+import "./NotFound.scss";
 
 class NotFoundPage extends React.Component {
   render() {

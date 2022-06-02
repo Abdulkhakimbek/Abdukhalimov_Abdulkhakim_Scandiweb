@@ -6,10 +6,10 @@ import {
   selectCurrencyOptions,
   selectCurrentCurrency,
   setCurrentCurrency,
-} from "../../redux/currency.reducer";
-import { dismissCurrencyMenu } from "../../redux/ui.reducer";
+} from "../../redux/currencyReducer";
+import { dismissCurrencyMenu } from "../../redux/uiReducer";
 
-import "./CurrencyMenu.styles.scss";
+import "./CurrencyMenu.scss";
 
 class CurrencyMenu extends React.Component {
   dismissMenuHandler = () => {
@@ -36,11 +36,10 @@ class CurrencyMenu extends React.Component {
         <div className="currency-menu">
           {currencyOptions.map(({ label, symbol }) => (
             <div
-              className={`currency-menu__item ${
-                label === currentCurrency.label
-                  ? "currency-menu__item__active"
-                  : ""
-              }`}
+              className={`currency-menu__item ${label === currentCurrency.label
+                ? "currency-menu__item__active"
+                : ""
+                }`}
               key={label}
               onClick={(e) => handleClick(e, { label, symbol })}
             >

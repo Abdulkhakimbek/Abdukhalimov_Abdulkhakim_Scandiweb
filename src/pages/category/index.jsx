@@ -7,11 +7,11 @@ import { withParams } from "../../HOC";
 import {
   getCategoryProductsAsync,
   selectCategoryProducts,
-} from "../../redux/shop.reducer";
+} from "../../redux/shopReducer";
 
-import "./Category.styles.scss";
+import "./Category.scss";
 
-import CategoryItem from "../../components/categoryItem/CategoryItem.comp";
+import CategoryItem from "../../components/categoryItem";
 
 class CategoryPage extends React.Component {
   componentDidMount() {

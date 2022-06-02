@@ -5,9 +5,9 @@ const CategoryPage = lazy(() => import("./pages/category"));
 const ProductPage = lazy(() => import("./pages/product"));
 const CheckoutPage = lazy(() => import("./pages/checkout"));
 const ServerErrorPage = lazy(() =>
-  import("./pages/serverError")
+  import("./pages/server-error")
 );
-const NotFoundPage = lazy(() => import("./pages/notFound"));
+const NotFoundPage = lazy(() => import("./pages/not-found"));
 
 class AppRoutes extends React.Component {
   render() {

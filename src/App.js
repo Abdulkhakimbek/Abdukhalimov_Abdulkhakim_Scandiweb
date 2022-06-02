@@ -12,7 +12,7 @@ import {
 
 import HeaderComp from "./components/header";
 import AppRoutes from "./routes";
-import ServerErrorPage from "./pages/serverError";
+import ServerErrorPage from "./pages/server-error";
 
 class App extends React.Component {
   componentDidMount() {

@@ -63,7 +63,14 @@ export const selectCartItems = createSelector([selectCartStore], (cart) => {
 });
 export const selectCartItemsTotalCount = createSelector(
   [selectCartItems],
-  (items) => items.length
+  (items) => {
+    const totalCount = items.map(
+      (item) => item.quantity).reduce(
+        (accumulator, item) => accumulator + item,
+        0
+      );
+    return totalCount;
+  }
 );
 export const selectCartItemsTotalPrice = createSelector(
   [selectCartItems],
@@ -72,7 +79,7 @@ export const selectCartItemsTotalPrice = createSelector(
       (accumulator, item) =>
         accumulator +
         item.prices.find((p) => p.currency.label === currency.label).amount *
-          item.quantity,
+        item.quantity,
       0
     );
     return `${currency.symbol}${formatPrice(total, currency)}`;

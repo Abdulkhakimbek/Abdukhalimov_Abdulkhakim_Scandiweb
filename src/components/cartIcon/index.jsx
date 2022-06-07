@@ -18,6 +18,7 @@ class CartIcon extends React.Component {
       e.stopPropagation();
       toggleMenu();
     };
+    console.log(itemsCount)
 
     return (
       <>

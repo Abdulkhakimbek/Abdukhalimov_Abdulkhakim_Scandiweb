@@ -27,29 +27,60 @@
   }
 }
 
-.cart-menu__cart-items-container {
+.cart-menu__cart-items-container {//here you can style
   display: flex;
   flex-direction: column;
+  display: block;
 
   .cart-items-container__items {
     @include custom-scrollbar;
-    margin-top: 1.5rem;
-    max-height: 20.5rem;
+    max-height: 22.5rem;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
   }
 
-  .cart-items__total {
+  .cart-items-summary {
     margin-top: 1.5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-weight: 700;
-    font-size: 1rem;
-
+  
     &:first-child {
       font-weight: 500;
+    }
+
+    .cart-items-summary__total {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .cart-items-summary__order,
+    .cart-items-summary__quantity,
+    .cart-items-summary__tax {
+      display: none;
+    }
+  }
+
+  .product-attribute {
+     margin-top: 0.5rem;
+  }
+
+  .product-attribute__options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    .base-radio-button {
+      min-width: 16px;
+      min-height: 16px;
+      padding: 0.4rem;
+
+      label {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 160%; 
+      }
     }
   }
 }

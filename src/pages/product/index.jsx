@@ -38,7 +38,6 @@ class ProductPage extends React.Component {
         }
         this.setState({ product });
         this.setState({ isLoading: false });
-        console.log(product)
       })
       .catch((error) => {
         console.log(JSON.stringify(error));

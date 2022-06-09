@@ -17,6 +17,7 @@ import { ReactComponent as RightArrowSVG } from "../../assets/images/arrow-right
 import { ReactComponent as DeleteSVG } from "../../assets/images/delete-sign.svg";
 import { ReactComponent as EditSVG } from "../../assets/images/edit-sign.svg";
 
+import ProductAttribute from "../productAttribute";
 import ProductModal from "../productModal";
 import "./CartItem.scss";
 
@@ -49,27 +50,27 @@ class CartItem extends React.Component {
       getProductPrice,
       displayThumbnailArrows,
     } = this.props;
-    const { brand, name, gallery, quantity, selectedAttributes, prices } = item;
+    const { brand, name, gallery, quantity, id, attributes, selectedAttributes, prices } = item;
     const { selectedImageIdx } = this.state;
 
     const price = getProductPrice(prices);
+    console.log(item)
 
-    const displayedAttributes = map(selectedAttributes, (value, key) => {
-      const isYesNo = ["yes", "no"].includes(value.toLowerCase());
-      const isSwatch = value.startsWith("#");
-
-      return (
-        <span
-          key={key}
-          className={`cart-item__attribute 
-          ${value.toLowerCase() === "no" ? "cart-item__attribute__no" : ""}`}
-          style={{ backgroundColor: isSwatch ? value : null }}
-          title={isSwatch ? key : `${key}: ${value}`}
-        >
-          {isSwatch ? "" : isYesNo ? key : value}
-        </span>
-      );
-    });
+    // const displayedAttributes = map(selectedAttributes, (value, key) => {
+    //   const isYesNo = ["yes", "no"].includes(value.toLowerCase());
+    //   const isSwatch = value.startsWith("#");
+    //   return (
+    //     <span
+    //       key={key}
+    //       className={`cart-item__attribute 
+    //       ${value.toLowerCase() === "no" ? "cart-item__attribute__no" : ""}`}
+    //       style={{ backgroundColor: isSwatch ? value : null }}
+    //       title={isSwatch ? key : `${key}: ${value}`}
+    //     >
+    //       {isSwatch ? "" : isYesNo ? key : value}
+    //     </span>
+    //   );
+    // });
 
     return (
       <div className="cart-item">
@@ -88,7 +89,17 @@ class CartItem extends React.Component {
               ) : null}
             </div>
           </div>
-          <div className="cart-item__attributes">{displayedAttributes}</div>
+          <div className="cart-item__attributes">
+            {/* {displayedAttributes} */}
+            {attributes.map((item) => (
+              <ProductAttribute
+                attribute={item}
+                productId={id}
+                key={item.id}
+                selectedAttributes={selectedAttributes}
+              />
+            ))}
+          </div>
         </div>
 
         <div className="cart-item__quantity">

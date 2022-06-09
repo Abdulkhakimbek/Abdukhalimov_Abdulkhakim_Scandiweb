@@ -1,9 +1,9 @@
 @import "../../assets/scss/variables.scss";
 
 .cart-item {
-  min-height: 8.5625rem;
   display: grid;
   grid-template-columns: 50% auto 35%;
+  margin-top: 30px;
 
   @include md {
     &:hover .cart-item__extra-buttons {
@@ -67,7 +67,7 @@
 
 .cart-item__attributes {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 0.1rem;
 }

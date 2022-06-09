@@ -24,6 +24,8 @@ class CartItemsContainer extends React.Component {
     } = this.props;
 
     const totalPrice = cartItemsTotalPrice(currentCurrency);
+    let tax = parseFloat(totalPrice.substring(1)) * 21 / 100
+
     return (
       <div className={className}>
         {cartItemsTotalCount ? (
@@ -43,9 +45,22 @@ class CartItemsContainer extends React.Component {
         )}
 
         {!cartItemsTotalCount && displayThumbnailArrows ? null : (
-          <div className="cart-items__total">
-            <span>Total</span>
-            <span>{totalPrice}</span>
+          <div className="cart-items-summary">
+            <div className="cart-items-summary__tax">
+              <span>Tax 21%:</span>
+              <span>{` $ ${tax}`}</span>
+            </div>
+            <div className="cart-items-summary__quantity">
+              <span>Quantity:</span>
+              <span>{cartItemsTotalCount}</span>
+            </div>
+            <div className="cart-items-summary__total">
+              <span>Total:</span>
+              <span>{totalPrice}</span>
+            </div>
+            <button className="cart-items-summary__order">
+              Order
+            </button>
           </div>
         )}
       </div>

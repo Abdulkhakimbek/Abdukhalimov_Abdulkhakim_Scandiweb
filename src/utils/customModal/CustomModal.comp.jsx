@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 import "./CustomModal.styles.scss";
 
-const modalRoot = () => document.getElementById("modal-root");
+const modalRoot = document.getElementById("modal-root");
 
 class CustomModal extends React.Component {
   constructor(props) {
@@ -13,11 +13,11 @@ class CustomModal extends React.Component {
   }
 
   componentDidMount() {
-    modalRoot().appendChild(this.el);
+    modalRoot.appendChild(this.el);
   }
 
   componentWillUnmount() {
-    modalRoot().removeChild(this.el);
+    modalRoot.removeChild(this.el);
   }
 
   render() {

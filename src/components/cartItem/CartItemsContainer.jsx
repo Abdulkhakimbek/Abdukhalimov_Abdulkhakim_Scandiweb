@@ -24,7 +24,7 @@ class CartItemsContainer extends React.Component {
     } = this.props;
 
     const totalPrice = cartItemsTotalPrice(currentCurrency);
-    let tax = parseFloat(totalPrice.substring(1)) * 21 / 100
+    let tax = (parseInt(totalPrice.substring(1))) * 21 / 100
 
     return (
       <div className={className}>

@@ -1,5 +1,4 @@
 import React from "react";
-import { map, size } from "lodash";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
@@ -14,8 +13,6 @@ import { ReactComponent as AddSVG } from "../../assets/images/add-sign.svg";
 import { ReactComponent as SubSVG } from "../../assets/images/sub-sign.svg";
 import { ReactComponent as LeftArrowSVG } from "../../assets/images/arrow-left.svg";
 import { ReactComponent as RightArrowSVG } from "../../assets/images/arrow-right.svg";
-import { ReactComponent as DeleteSVG } from "../../assets/images/delete-sign.svg";
-import { ReactComponent as EditSVG } from "../../assets/images/edit-sign.svg";
 
 import ProductAttribute from "../productAttribute";
 import ProductModal from "../productModal";
@@ -54,23 +51,6 @@ class CartItem extends React.Component {
     const { selectedImageIdx } = this.state;
 
     const price = getProductPrice(prices);
-    console.log(item)
-
-    // const displayedAttributes = map(selectedAttributes, (value, key) => {
-    //   const isYesNo = ["yes", "no"].includes(value.toLowerCase());
-    //   const isSwatch = value.startsWith("#");
-    //   return (
-    //     <span
-    //       key={key}
-    //       className={`cart-item__attribute 
-    //       ${value.toLowerCase() === "no" ? "cart-item__attribute__no" : ""}`}
-    //       style={{ backgroundColor: isSwatch ? value : null }}
-    //       title={isSwatch ? key : `${key}: ${value}`}
-    //     >
-    //       {isSwatch ? "" : isYesNo ? key : value}
-    //     </span>
-    //   );
-    // });
 
     return (
       <div className="cart-item">
@@ -81,16 +61,8 @@ class CartItem extends React.Component {
               <h1 className="cart-item__info__name">{name}</h1>
               <span className="cart-item__info__price">{price}</span>
             </div>
-            <div className="cart-item__extra-buttons">
-              <DeleteSVG onClick={() => this.props.clearItem(item)} />
-
-              {size(selectedAttributes) > 0 ? (
-                <EditSVG onClick={() => this.setState({ showModal: true })} />
-              ) : null}
-            </div>
           </div>
           <div className="cart-item__attributes">
-            {/* {displayedAttributes} */}
             {attributes.map((item) => (
               <ProductAttribute
                 attribute={item}

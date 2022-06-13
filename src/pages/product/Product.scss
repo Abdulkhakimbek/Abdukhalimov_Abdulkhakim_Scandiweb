@@ -151,14 +151,16 @@
   }
 
   .base-radio-button {
-    min-width: 3.9375rem;
-    height: 2.8125rem;
+    max-width: 63px;
+    max-height: 45px;
+    min-width: 32px;
+    min-height: 32px;
 
     label {
       font-weight: 400;
-      font-size: 1rem;
-      line-height: 1rem;
-      padding: 0.95rem;
+      font-size: 16px;
+      line-height: 18px;
+      padding: 1rem;
     }
   }
 }

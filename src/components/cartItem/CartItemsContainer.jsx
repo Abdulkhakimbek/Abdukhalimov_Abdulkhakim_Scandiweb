@@ -10,6 +10,7 @@ import {
 } from "../../redux/cartReducer";
 
 import CartItem from ".";
+import { formatPrice } from "../../redux/utils";
 
 class CartItemsContainer extends React.Component {
   render() {
@@ -24,7 +25,9 @@ class CartItemsContainer extends React.Component {
     } = this.props;
 
     const totalPrice = cartItemsTotalPrice(currentCurrency);
-    let tax = (parseInt(totalPrice.substring(1))) * 21 / 100
+    let tax = (totalPrice.substring(1).replace(",", "") * 21 / 100)
+
+    tax = formatPrice(tax, currentCurrency)
 
     return (
       <div className={className}>
@@ -48,7 +51,7 @@ class CartItemsContainer extends React.Component {
           <div className="cart-items-summary">
             <div className="cart-items-summary__tax">
               <span>Tax 21%:</span>
-              <span>{` $ ${tax}`}</span>
+              <span>{` ${currentCurrency.symbol} ${tax}`}</span>
             </div>
             <div className="cart-items-summary__quantity">
               <span>Quantity:</span>

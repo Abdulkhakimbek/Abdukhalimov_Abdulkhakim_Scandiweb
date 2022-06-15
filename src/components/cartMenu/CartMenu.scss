@@ -69,10 +69,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 5px;
 
     .base-radio-button {
-      min-width: 16px;
+      min-width: 18px;
       min-height: 16px;
       padding: 0.4rem;
       pointer-events: none;
